@@ -4,106 +4,228 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me v Machine</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bespoke VR</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <script src="js/scripts.js"></script>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-5">
+        <a class="logoBespokeVR" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:harry@bespokevr.com">CONTACT</a>
+            </li>
+        </ul>
+
+      </div>
+    </nav>
     
     <header class="heroContainer">
-        <nav>
-            <div class="logoMvM"></div>
-            <a href="#" target="_blank" class="appBtn">
-                <span class="appStore"></span>
-            </a>
-        </nav>
         <div class="headerContent">
-            <h1>Ace your video interviews & meetings</h1>
-            <hr>
-            <p>These days everyone has to do video meetings and interviews. Increasingly our interviewer is an AI-enabled machine. We feel anxious and awkward. Nobody tells us what works well to get the ‘Yes’. The MvM app will give you expert training and rehearsal so you ace your interviews and get the <strong>Yes!</strong></p>
-            <a href="#" target="_blank" class="appBtn">
-                <span class="appStore"></span>
-            </a>
+            <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active" style="background:url('img/ziaPoster1920.jpg');">
+                    <div class="carousel-content">
+                        <h1>Zia Dance Duet</h1>
+                        <p>Ai full body dancing with a dancer.</p>
+                        <a href="zia.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h1>Project name 02</h1>
+                        <p>Ai full body dancing with a dancer.</p>
+                        <a href="zia.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
+                    </div>
+
+                    <video playsinline="" autoplay="" muted="" loop="" class="heroVideo w-100 vh-80" poster="">
+                        <source src="https://www.net-zero-hub.com/wp-content/uploads/2021/08/MSCI_Road_To_COP_Clip_01-v2.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="carousel-item" style="background:url('img/ziaPoster1920.jpg');">
+                    <div class="carousel-content">
+                        <h1>Project name 03</h1>
+                        <p>Ai full body dancing with a dancer.</p>
+                        <a href="zia.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
         </div>
     </header>
 
     <main>
         <section class="about">
             <div class="aboutIntro">
-                <h2>About us</h2>
-                <hr>
-                <p>We develop tools to help people prepare for their most important business meetings and interviews.</p>
+                <h2>Purveyors of fine immersion</h2>
+                <p>BespokeVR is an immersive content studio. One of Createch’s 100 Ones to Watch.</p>
             </div>
             <div class="cardContainer">
-                <div class="card">
-                    <span>01</span>
-                    <img src="img/cardCode.jpg" alt="computer code">
+                <div class="cardInner">
+                    <img src="img/ziaPoster1920.jpg" alt="computer code">
                     <div class="cardContent">
-                        <h3>Who we are</h3>
-                        <p>MvM was created by a research-led team of board-level executive search consultants, successful performing arts professionals from stage and screen and immersive reality technologists.</p>
+                        <h3>VR & AR app development</h3>
+                        <p>We offer a full design to development service. Get in touch for more info.</p>
+                        <a href="appdevelopment.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
                     </div>
                 </div>
-                <div class="card">
-                    <span>02</span>
-                    <img src="img/cardSatellite.jpg" alt="satellite image of america">
+                <div class="cardInner">
+                    <img src="img/ziaPoster1920.jpg" alt="satellite image of america">
                     <div class="cardContent">
-                        <h3>Our Mission</h3>
-                         <p>Our mission is to level the playing field in favour of people in a world that is increasingly shaped in favour of AI-enabled machines.</p>
+                        <h3>Social VR</h3>
+                         <p>Build your own private virtual world with enterprise level security.</p>
+                         <a href="socialvr.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
                     </div>
                 </div>
-                <div class="card">
-                    <span>03</span>
-                    <img src="img/cardCity.jpg" alt="skyscrapers">
+                <div class="cardInner">
+                    <img src="img/ziaPoster1920.jpg" alt="skyscrapers">
                     <div class="cardContent">
-                       <h3>What we do</h3>
-                       <p>Large organisations, in both the private and public sectors, are rapidly implementing artificial intelligence enabled, machine interviews of candidates and of applicants for services like bank loans.</p>
+                       <h3>Full-body Immersion</h3>
+                       <p>Experience your full body in VR.</p>
+                       <a href="immersion.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="app">
-            <div class="appImg"></div>
-            <div class="appContent">
-                <h2>The MvM App</h2>
-                <p>The MvM App rehearses and prepares you for your critical interviews and meetings to help you get the Yes! whether you are interviewed by a machine or a human.</p>
-                <div>
-                    <h3>Recommended use</h3>
-                    <p>Use the MvM App every day for at least 20 minutes a day for a minimum of 5 days before an important business meeting or interview.</p>
-                    <h3>Technical Requirements</h3>
-                    <p>The current version of the App is designed to operate on a smartphone operating iOS 13.6.0 or later version of iOS.</p>
+        <section class="work">
+            <div class="workIntro">
+                <h2>Selected Works</h2>
+                <a href="projects">view all projects ></a>
+            </div>
+            <div class="cardContainer">
+                <div class="cardInner">
+                    <img src="img/ziaPoster1920.jpg" alt="computer code">
+                    <div class="cardContent">
+                        <h3>Me v Machine</h3>
+                        <p>Zia Dance Duet combines the thrill of full body immersion with the joy of dancing with Zia, a living and responsive AI dancer. </p>
+                        <a href="appdevelopment.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardInner">
+                    <img src="img/ziaPoster1920.jpg" alt="satellite image of america">
+                    <div class="cardContent">
+                        <h3>3Dctrl</h3>
+                         <p>Zia Dance Duet combines the thrill of full body immersion with the joy of dancing with Zia, a living and responsive AI dancer. </p>
+                         <a href="socialvr.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardInner">
+                    <img src="img/ziaPoster1920.jpg" alt="skyscrapers">
+                    <div class="cardContent">
+                       <h3>NHS Medical</h3>
+                       <p>Zia Dance Duet combines the thrill of full body immersion with the joy of dancing with Zia, a living and responsive AI dancer. </p>
+                       <a href="immersion.html">
+                            <button>
+                                FIND OUT MORE
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="download">
-            <h2>Download the app</h2>
-            <hr>
-            <p>Me v Machine is avaliable to download from the app store now.</p>
-            <a href="#" target="_blank">
-                <div class="appStore"></div>
-            </a>
+
+        <section class="client">
+            <h2>Our Clients</h2>
+            <ul>
+                <li><img src="img/3dctrl.svg" alt="3dctrl"></li>
+                <li><img src="img/artificialArtists.svg" alt="artificialArtists"></li>
+                <li><img src="img/nhs.svg" alt="nhs"></li>
+                <li><img src="img/genericRobots.svg" alt="Generic Robots"></li>         
+            </ul>
+            <ul>
+                <li><img src="img/uclic.svg" alt="uclic"></li>
+                <li><img src="img/imperialCollege.svg" alt="Imperial College London"></li>
+                <li><img src="img/cambridge.svg" alt="Cambridge Education Group"></li>
+                <li><img src="img/durham.svg" alt="Durham University"></li>         
+            </ul>
+            
         </section>
     </main>
 
     <footer>
         <div class="footerContent">
+            <div class="message">SEND A MESSAGE <a href="mailto:harry@bespokevr.com?Subject=Bespoke VR Enquiry"><img src="img/iconMessage.svg" alt="message"></a></div>
+            
             <ul>
-                <li>Home</li>
-                <li class="spacer">|</li>
-                <li>
-                    <a href="terms.html">Terms & Conditions</a>
-                </li>
-                <li class="spacer">|</li>
-                <li>
-                    <a href="mailto:robin@roberts.uk.net?Subject=Me v Machine Enquiry">Contact</a>
-                </li>
+                <li>BespokeVR Ltd, 4th Floor, 86-90 Paul Street, London, EC2A 4NE.</li>    
+                <li>Tel: 0203 826 8311 E: harry@bespokeVR.com</li>
+                <br>
+                <li>© BESPOKEVR 2022</li>
             </ul>
-            <span class="copyright">Copyright © Rehearse it! Limited, 4 South Bar Street, Banbury, Oxfordshire OX16 9AA, United Kingdom</span>
         </div>
-        <div class="logoMvMVertical"></div>
+        <div class="logoBespokeVR"></div>
     </footer>
 
 </body>
