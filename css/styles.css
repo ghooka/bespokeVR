@@ -256,7 +256,7 @@ img {
 }
 
 .logoBespokeVR {
-    background: url('/img/bespokeVRlogo.svg') no-repeat 0 center;
+    background: url('../img/bespokeVRlogo.svg') no-repeat 0 center;
     width: 130px;
     height: 35px;
     transition: .3s all ease;
