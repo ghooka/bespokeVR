@@ -7,6 +7,7 @@ body, html {
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.3px;
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -608,6 +609,60 @@ section.client ul li {
     
 }
 
+section.ourProjects h2 {
+    font-weight: 600;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+section.ourProjects {
+    padding: 6em 10vw;
+}
+
+section.ourProjects h2{
+    text-align: center;
+}
+
+
+section.ourProjects ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+section.ourProjects ul li {
+    width: 120px;
+    height: 110px;
+    list-style: none;
+    padding: 1em;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 5px 4px 20px 0px #0000000f;
+    margin: 0 .6em 1rem;
+    background-size: cover !important;
+}
+
+
+@media only screen and (min-width: 576px) {
+    section.ourProjects ul  {  
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 1rem;
+    }
+    section.ourProjects ul li {
+        width: 270px;
+        height: 150px;
+        padding: 1em 2.9em;
+        margin: 0 1em;
+    }
+    
+}
+
 
 section.work {
     padding: 3em 3vw;
@@ -668,7 +723,7 @@ section.work {
 }
 
 .cardContainer .cardInner img {
-    max-height: 400px;
+    height: 290px;
     object-fit: cover;
 }
 
@@ -927,7 +982,7 @@ body footer {
     display: none;
 }
 
-.footerContent .message a {
+.footerContent .message .msgBtn {
     padding: 0.45em 0.6em 0.6em 0.6em;
     background: #ffffff;
     border-radius: 10px;
@@ -938,8 +993,18 @@ body footer {
     margin-bottom: 1.5em;
 }
 
-.message a  {
+.message .msgBtn   {
     margin-left: 0.5em;
+}
+
+.message a   {
+    color: #ffffff;
+    transition: all .3s ease;
+}
+
+.message a:hover   {
+    color: #5E2BFF;
+    text-decoration: none;
 }
 
 
@@ -967,3 +1032,28 @@ body footer {
 }
 
 
+section.title { 
+    height: 30vh; 
+    background: #101010;
+    position: relative;
+}
+
+.title-content {
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    z-index: 99999;
+}
+
+
+section.title h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.1em;
+    font-weight: 600;
+    color: #ffffff;
+}
