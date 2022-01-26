@@ -262,50 +262,18 @@ img {
     height: 35px;
     transition: .3s all ease;
 }
-
-footer .logoBespokeVR {
-    margin: 0 auto;
-}
-
-.logoMvM:hover {
-    opacity: .6;
-}
-
 @media only screen and (min-width: 576px) {
-    .logoMvM {
-        width: 270px;
-    }
-    .logoMvMVertical {
-       margin: 0;
-    }
-
-    .appStore{
-        background: url('img/appStore.svg') no-repeat right 0 ;
-        width: 135px;
-        background-size: 110px 40px;
-    }
-    footer .logoBespokeVR {
-        margin: initial;
-        width: 200px;
-    }
-
     .logoBespokeVR {
         width: 160px;
         height: 35px;
     }
-
-
-}
-
-.appStore{
-    background: url('img/appStore.svg') no-repeat 0 0 ;
-
-    width: 135px;
-    height: 40px;
-    display: block;
 }
 
 
+
+footer .logoBespokeVR {
+    margin: 0 auto;
+}
 
 .heroContainer nav {
     display: -webkit-box;
@@ -810,7 +778,11 @@ section.work .cardContent h3 {
     }
 }
 
-section.app {
+body.project {
+    background: #101010;
+}
+
+section.layout {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -825,56 +797,81 @@ section.app {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: -o-linear-gradient(80.69deg, rgba(94, 43, 255, 0.2) 9.43%, rgba(0, 0, 0, 0) 96.7%), #1B1825;
-    background: linear-gradient(9.31deg, rgba(94, 43, 255, 0.2) 9.43%, rgba(0, 0, 0, 0) 96.7%), #1B1825;
+    background: #101010;
     color: #FFFFFF;
     position: relative;
+    margin: 2em 1em;
 }
 
-section.app .appImg {
+section.layout .layoutImg {
     background: url('img/mvmApp.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: cover !important;
     width: 100%;
-    height: 50vh;
+    height: 30vh;
 }
 
+.layoutContent {
+    padding: 10% 0;
+}
 @media only screen and (min-width: 576px) {
-    section.app {
+    section.layout {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        min-height: 70vh;
+        margin: 6em 2em;
     }
-    section.app .appImg {
+    section.layout .layoutImg {
         width: 50%;
         height: 100%;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
-        right: 0;
     }
 
-    .appContent {
+    section.layout.rev .layoutImg {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: auto;
+    }
+
+    .layoutContent {
         width: 50%;
         margin-left: auto;
+        padding: 10%;
+    }
+
+    .rev .layoutContent {
+        width: 50%;
+        margin-right: auto;
+        margin-left: initial;
+    }
+
+    section.layout .layoutImg {
+        width: 50%;
+        height: 100%;
     }
 }
 
-.appContent {
-    padding: 10% 5%;
+
+
+.layoutContent h2 {
+    font-weight: 600;;
+    margin: 0 0 1em;
 }
 
-.appContent h2 {
-    margin: 0 0 .2em;
-}
-
-.appContent div {
+.layoutContent div {
     position: relative;
     padding-left: 1.8em;
     margin: 2em 0;
 }
 
-.appContent div::after {
+.layoutContent div::after {
     content: '';
     width: 4px; 
     height: 100%;
@@ -886,7 +883,7 @@ section.app .appImg {
 }
 
 
-.appContent div h3 {
+.layoutContent div h3 {
     margin-bottom: .5em;
 }
 
@@ -900,7 +897,45 @@ section.download .appStore {
    margin: 0 auto;
 }
 
+.videoPlayer {
+    display: flex;
+    flex-direction: column;
+    padding: 5em 0 0;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 
+.videoPlayer h2 {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1em;
+}
+
+
+.videoPlayer iframe {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+    .videoPlayer {
+        padding: 5em 15vw 0;
+    }
+
+    .videoPlayer iframe {
+        width: 100%;
+        position: relative;
+        height: 50vh;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .carousel-inner {
+        height: 85vh;
+    }
+}
 
 section.terms {
     padding: 6em 3vw;
@@ -1060,4 +1095,65 @@ section.title h1 {
     margin-bottom: 0.1em;
     font-weight: 600;
     color: #ffffff;
+}
+
+section.project { 
+    height: 65vh; 
+    background: #101010;
+    position: relative;
+    background-size: cover !important;
+}
+section.project::before {
+    content: '';
+    background: #0000007d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.project-content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    padding: 0 10vw;
+    transform: translateY(-50%);
+    color: #ffffff;
+    text-align: left;
+    z-index: 99999;
+}
+
+.project-content .projectSubtitle {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+section.project h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+@media only screen and (min-width: 576px) {
+
+    section.project { 
+        height: 85vh; 
+    }
+
+
+    .project-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        padding:0 20vw 0 50vw;
+        transform: translateY(-50%);
+        color: #ffffff;
+        text-align: left;
+        z-index: 99999;
+    }
+
 }
