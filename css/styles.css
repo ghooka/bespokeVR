@@ -645,8 +645,12 @@ section.ourProjects ul li {
     box-shadow: 5px 4px 20px 0px #0000000f;
     margin: 0 .6em 1rem;
     background-size: cover !important;
+    transition: all .3s ease;
 }
 
+section.ourProjects ul li:hover {
+    opacity: .8;
+}
 
 @media only screen and (min-width: 576px) {
     section.ourProjects ul  {  
