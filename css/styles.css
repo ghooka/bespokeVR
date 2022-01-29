@@ -465,7 +465,7 @@ header.headerContent {
 
 section.about {
     background: #101010;
-    padding: 3em 3vw;
+    padding: 6em 3vw;
  }
  
  @media only screen and (min-width: 576px) {
@@ -708,6 +708,10 @@ section.work {
     object-fit: cover;
 }
 
+section.about .cardContainer .cardInner img {
+    height: 220px;
+}
+
 @media only screen and (min-width: 576px) {
     .cardContainer .cardInner {
         margin: 4em auto 0;
@@ -723,6 +727,9 @@ section.work {
         object-fit: cover;
     }
     
+    section.about .cardContainer .cardInner img {
+        height: 290px;
+    }
     
 }
 
