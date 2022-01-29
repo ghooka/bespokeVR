@@ -53,9 +53,27 @@ button {
     transition: all .3s ease;
 }
 
+
 button:hover {
     background: #ffffff;
     color: #000000;
+}
+
+button.navbar-toggler:hover {
+    background: initial;
+    color: initial
+}
+
+button.navbar-toggler {
+   border: none;
+   padding: 1em 0 1em 1em;
+}
+
+button.navbar-toggler .navIcon {
+    background: url('../img/navIcon.svg') no-repeat center center;
+    background-size: contain;
+    width: 32px;
+    height: 16px;
 }
 
 .headerContent .carousel .carousel-indicators {
@@ -64,7 +82,13 @@ button:hover {
     right: 0;
     margin-right: 5%;
     text-align: right;
-    margin-bottom: 3em;
+    margin-bottom: 1.3em;
+}
+
+@media only screen and (min-width: 576px) {
+    .headerContent .carousel .carousel-indicators{
+        margin-bottom: 3em;
+    }
 }
 
 .carousel .carousel-indicators li {
@@ -152,7 +176,7 @@ section.about h2, section.about p {
 }
 
 .carousel-content h1 {
-    font-size: 3em;
+    font-size: 2.4em;
     line-height: 1;
     margin-bottom: 0.1em;
     font-weight: 600;
@@ -262,48 +286,24 @@ img {
     height: 35px;
     transition: .3s all ease;
 }
+
+footer .logoBespokeVR {
+    margin: 2em auto;
+}
 @media only screen and (min-width: 576px) {
-    .logoBespokeVR {
+    footer .logoBespokeVR {
         width: 160px;
         height: 35px;
+        margin: initial;
     }
 }
 
 
 
-footer .logoBespokeVR {
-    margin: 0 auto;
-}
 
-.heroContainer nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 3em;
-    position: fixed;
-    z-index: 999999;
-    top:0; 
-    left: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0), transparent);
-    transition: background-color 200ms linear;
+
+body nav.navbar {
+    padding: 1.5em !important;
 }
 
 nav ul li {
@@ -331,7 +331,13 @@ nav .appBtn {
 nav.scrolled {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent);   
   }
-
+  
+nav ul li a {
+    line-height: 1.8;
+    font-size: 1.3em;
+    font-weight: 700; 
+}
+  
 @media only screen and (min-width: 576px) {
     nav .appBtn {
         display: block;
@@ -339,6 +345,8 @@ nav.scrolled {
     nav ul li a {
        margin-left: 1em;
         font-size: 12px;
+        line-height: initial;
+        font-weight: initial;
     }
 }
 
@@ -365,7 +373,7 @@ nav{
     }
 
     #navbarSupportedContent{
-    background: black;
+    background: #101010;
     position: fixed;
     z-index: 99999;
     width: 100%;
@@ -377,7 +385,7 @@ nav{
 }
 
 ul.navbar-nav.ml-auto {
-    padding: 40% 0;
+    padding: 50% 0;
     text-align: center;
 }
 }
@@ -584,7 +592,7 @@ section.ourProjects h2 {
 }
 
 section.ourProjects {
-    padding: 6em 10vw;
+    padding: 3em 10vw;
 }
 
 section.ourProjects h2{
@@ -621,17 +629,30 @@ section.ourProjects ul li:hover {
 }
 
 @media only screen and (min-width: 576px) {
+
+    section.ourProjects {
+        padding: 6em 18vw;
+    }
+
     section.ourProjects ul  {  
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
     }
     section.ourProjects ul li {
         width: 270px;
         height: 150px;
         padding: 1em 2.9em;
-        margin: 0 1em;
+        margin:1em;
     }
+
+    section.ourProjects ul a{
+ 
+    }
+
+
     
 }
 
@@ -682,6 +703,11 @@ section.work {
     justify-content: space-between;
 }
 
+.cardContainer .cardInner img {
+    height: 130px;
+    object-fit: cover;
+}
+
 @media only screen and (min-width: 576px) {
     .cardContainer .cardInner {
         margin: 4em auto 0;
@@ -691,13 +717,16 @@ section.work {
         width: 33.33333%;
         margin: 0 1em;
     }
+
+    .cardContainer .cardInner img {
+        height: 290px;
+        object-fit: cover;
+    }
+    
     
 }
 
-.cardContainer .cardInner img {
-    height: 290px;
-    object-fit: cover;
-}
+
 
 
 .work .cardContainer .cardInner {
@@ -900,7 +929,7 @@ section.download .appStore {
 .videoPlayer {
     display: flex;
     flex-direction: column;
-    padding: 5em 0 0;
+    padding: 3em 0;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -1090,7 +1119,7 @@ section.title {
 
 
 section.title h1 {
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1;
     margin-bottom: 0.1em;
     font-weight: 600;
@@ -1098,7 +1127,7 @@ section.title h1 {
 }
 
 section.project { 
-    height: 65vh; 
+    height: 80vh; 
     background: #101010;
     position: relative;
     background-size: cover !important;
@@ -1131,7 +1160,7 @@ section.project::before {
 }
 
 section.project h1 {
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1;
     margin-bottom: 0.5em;
     font-weight: 600;
@@ -1139,6 +1168,15 @@ section.project h1 {
 }
 
 @media only screen and (min-width: 576px) {
+
+
+section.title h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.1em;
+    font-weight: 600;
+    color: #ffffff;
+}
 
     section.project { 
         height: 85vh; 
