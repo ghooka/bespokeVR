@@ -29,6 +29,8 @@ h1 {
 h2 {
     font-size: 28px;
     line-height: 120%;
+    letter-spacing: -1px;
+
 }
 
 h3 {
@@ -48,7 +50,7 @@ button {
     border: solid 2px #ffffff;
     background: none;
     color: #ffffff;
-    font-size: .7em !important;
+    font-size: .65em !important;
     font-weight: 600;
     transition: all .3s ease;
 }
@@ -99,6 +101,14 @@ button.navbar-toggler .navIcon {
 
 section.about h2, section.about p {
     color: #ffffff;
+}
+
+section.about p {
+    margin-bottom: 2em;
+}
+
+section.about p.projectInfo {
+    margin-bottom: 0;
 }
 
 .carousel-item::before {
@@ -178,14 +188,14 @@ section.about h2, section.about p {
 .carousel-content h1 {
     font-size: 2.4em;
     line-height: 1;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.2em;
     font-weight: 600;
 }
 
 
 @media only screen and (min-width: 576px) {
     .carousel-content h1 {
-        font-size: 5em;
+        font-size: 3.8em;
     }
 }
 
@@ -243,7 +253,7 @@ section.about h2, section.about p {
 p, ul, li, span {
     margin-top: 0;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 14px;
     line-height: 1.3;
 }
@@ -251,8 +261,8 @@ p, ul, li, span {
 @media only screen and (min-width: 576px) {
 
     p, ul, li, span {
-        font-size: 16px;
-        line-height: 1.3;
+        font-size: 15px;
+        line-height: 1.5;
     }
 
     span.copyright {
@@ -282,7 +292,7 @@ img {
 
 .logoBespokeVR {
     background: url('../img/bespokeVRlogo.svg') no-repeat 0 center;
-    width: 130px;
+    width: 150px;
     height: 35px;
     transition: .3s all ease;
 }
@@ -302,8 +312,12 @@ footer .logoBespokeVR {
 
 
 
+body nav{
+    
+}
+
 body nav.navbar {
-    padding: 1.5em !important;
+    padding: 3em 5% !important;
 }
 
 nav ul li {
@@ -470,12 +484,14 @@ section.about {
  
  @media only screen and (min-width: 576px) {
      section.about {
-         padding: 6em 3vw;
+         padding: 7em ​10vw;
       }
  }
 
 .aboutIntro {
     text-align: center;
+    max-width: 40%;
+    margin: 0 auto;
 }
 
 .aboutIntro h2 {
@@ -486,7 +502,8 @@ section.about {
 
 @media only screen and (min-width: 576px) {
     .aboutIntro h2 {
-        font-size: 3em;
+        font-size: 2.7em;
+        margin-bottom: 0.6em;
     }
 }
 
@@ -496,25 +513,24 @@ section.about {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
 }
 
 
 
 .workIntro h2 {
     font-weight: 600;
-    font-size: 2em;
+    font-size: 2.7em;
     margin: 0;
 }
 
 @media only screen and (min-width: 576px) {
     .workIntro {
-        display: flex;
+        /* display: flex; */
     }
 
     .workIntro h2 {
         font-weight: 600;
-        font-size: 3em;
+        font-size: 2.7em;
         margin: 0;
     }
     
@@ -539,7 +555,7 @@ section.client h2 {
 
 section.client {
     background: #F2F2F2;
-    padding: 6em 10vw;
+    padding: 6em 3vw;
 }
 
 section.client h2{
@@ -555,16 +571,21 @@ section.client ul {
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
+    align-items: stretch;
 }
 
 section.client ul li {
     width: 120px;
-    height: 110px;
+    height: auto;
     list-style: none;
     padding: 1em;
     background: white;
-    border-radius: 20px;
+    border-radius: 13px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
     box-shadow: 11px 9px 20px 0px #0000000f;
     margin: 0 .6em 1rem;
 }
@@ -573,14 +594,12 @@ section.client ul li {
 @media only screen and (min-width: 576px) {
     section.client ul  {  
         display: flex;
-        flex-wrap: nowrap;
-        margin-bottom: 1rem;
+        margin-bottom: 1.2em;
     }
     section.client ul li {
-        width: 270px;
-        height: 150px;
+        width: 194px;
         padding: 1em 2.9em;
-        margin: 0 1em;
+        margin: 1em;
     }
     
 }
@@ -663,13 +682,20 @@ section.work {
 
 @media only screen and (min-width: 576px) {
     section.work {
-        padding: 6em 3vw;
+        padding: 6em 18vw;
+    }
+    
+}
+
+@media only screen and (min-width: 996px) {
+    section.work {
+        padding: 6em 12vw;
     }
     
 }
 
 .workIntro {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .workIntro hr, section.download hr {
@@ -718,12 +744,11 @@ section.about .cardContainer .cardInner img {
     }
 
     .cardContainer .cardInner {
-        width: 33.33333%;
         margin: 0 1em;
     }
 
     .cardContainer .cardInner img {
-        height: 290px;
+        height: 220px;
         object-fit: cover;
     }
     
@@ -733,7 +758,13 @@ section.about .cardContainer .cardInner img {
     
 }
 
-
+@media only screen and (min-width: 996px) {
+    .cardContainer .cardInner {
+        width: 33.33333%;
+        margin: 0 1em;
+    }
+ 
+}
 
 
 .work .cardContainer .cardInner {
@@ -748,18 +779,93 @@ section.about .cardContainer .cardInner img {
 }
 
 .work .cardContainer .cardInner button {
-    padding: 0.7em 2em;
+    padding: 0.8em 2em;
     border-radius: 50px !important;
-    border: solid 2px #101010;
+    border: solid 1px #101010;
     background: none;
     color: #101010;
     transition: all .3s ease;
+    line-height: 1;
 }
 
 .work .cardContainer .cardInner button:hover {
     background: #101010;
     color: #ffffff;
 }
+
+
+.work .cardContainer .cardInner ul  {
+   padding: 0;
+}
+
+.work .cardContainer .cardInner ul li.icon {
+    margin-right: .2em;
+}
+.work .cardContainer .cardInner ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.2em;
+    font-size: .85em;
+    font-weight: 400;
+}
+
+.work .cardContainer .cardInner .icon.apple {
+    background: url('../img/appleIcon.svg') no-repeat center center;
+    background-size: contain !important;
+    width: 16px; 
+    height: 16px;
+    margin-top: -2.6px;
+}
+
+.work .cardContainer .cardInner .icon.vr {
+    background: url('../img/vrIcon.svg') no-repeat center center;
+    background-size: contain !important;
+    width: 16px; 
+    height: 16px;
+    margin-top: -2.6px;
+}
+
+.work .cardContainer .cardInner .icon.ar {
+    background: url('../img/iconAR.svg') no-repeat center center;
+    background-size: contain !important;
+    width: 16px; 
+    height: 16px;
+    margin-top: -2.6px;
+}
+
+.work .cardContainer .cardInner .icon.installation{
+    background: url('../img/fileIcon.svg') no-repeat center center;
+    background-size: contain !important;
+    width: 16px; 
+    height: 16px;
+    margin-top: -2.6px;
+}
+
+
+
+.work .cardContainer .cardInner .icon.dot {
+    width: 14px; 
+    height: 14px;
+    border-radius: 100%;
+}
+
+.work .cardContainer .cardInner .icon.dot.ar {
+    background: #4D00DE;
+}
+
+.work .cardContainer .cardInner .icon.dot.vr {
+    background: #00d592;
+}
+
+.work .cardContainer .cardInner .icon.dot.immersion {
+    background: #FFBA00;
+}
+
+.work .cardContainer .cardInner .icon.dot.brain {
+    background: #F20089;
+}
+
+
 
 
 @media only screen and (min-width: 992px) {
@@ -770,7 +876,7 @@ section.about .cardContainer .cardInner img {
     .work .cardContainer .cardInner {
         margin: 0 1em;
         background: #F2F2F2;
-        border-radius: 15px;
+        border-radius: 13px;
         overflow: hidden;
     }
 }
@@ -793,11 +899,11 @@ section.about .cardContainer .cardInner img {
 }
 
 section.work .cardContent h3 {
-    margin-bottom: .6em;
+    margin-bottom: .2em;
     color: #101010;;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 996px) {
     .cardContainer {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -823,7 +929,7 @@ section.layout {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: nowrap;
+    -ms-flex-wra: nowrap;
         flex-wrap: nowrap;
     -ms-flex-line-pack: center;
         align-content: center;
@@ -855,7 +961,7 @@ section.layout .layoutImg {
         display: -ms-flexbox;
         display: flex;
         min-height: 70vh;
-        margin: 6em 2em;
+        margin: 0 2em 6em;
     }
     section.layout .layoutImg {
         width: 50%;
@@ -1186,7 +1292,7 @@ section.title h1 {
 }
 
     section.project { 
-        height: 85vh; 
+        height: 50vh; 
     }
 
 
